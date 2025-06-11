@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin - Résultats des votes</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; background: #f8f8f8; max-width: 900px; margin: auto; }
+    h1 { text-align: center; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    th, td { padding: 8px; border: 1px solid #ccc; text-align: left; }
+    input[type="password"], button { padding: 10px; margin: 10px 0; width: 100%; }
+    #adminPanel { display: none; }
+  </style>
+</head>
+<body>
+  <h1>🔒 Accès Administrateur</h1>
+  <div id="loginPanel">
+    <input type="password" id="password" placeholder="Entrez le mot de passe">
+    <button onclick="checkPassword()">Se connecter</button>
+    <p id="error" style="color:red;"></p>
+  </div>
+
+  <div id="adminPanel">
+    <h2>📊 Résultats en direct</h2>
+    <table id="resultsTable">
+      <thead>
+        <tr><th>Candidat</th><th>Nombre de votes</th></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <script>
+    const ADMIN_PASSWORD = "Lysft@2236";
+
+    function checkPassword() {
+      const input = document.getElementById("password").value;
+      if (input === ADMIN_PASSWORD) {
+        document.getElementById("loginPanel").style.display = "none";
+        document.getElementById("adminPanel").style.display = "block";
+        loadResults();
+      } else {
+        document.getElementById("error").innerText = "❌ Mot de passe incorrect.";
+      }
+    }
+
+    async function loadResults() {
+      const sheetUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQr6A3no4CFSFVoteDataURL/pub?output=csv";
+      const response = await fetch(sheetUrl);
+      const csvText = await response.text();
+      const rows = csvText.split("\n").map(row => row.split(","));
+      const voteCounts = {};
+      for (let i = 1; i < rows.length; i++) {
+        const votes = rows[i][3];
+        if (!votes) continue;
+        const selected = votes.split(";");
+        selected.forEach(name => {
+          const trimmed = name.trim();
+          if (trimmed) {
+            voteCounts[trimmed] = (voteCounts[trimmed] || 0) + 1;
+          }
+        });
+      }
+      const sorted = Object.entries(voteCounts).sort((a, b) => b[1] - a[1]);
+      const tbody = document.querySelector("#resultsTable tbody");
+      tbody.innerHTML = "";
+      sorted.forEach(([name, count]) => {
+        const row = document.createElement("tr");
+        row.innerHTML = `<td>${name}</td><td>${count}</td>`;
+        tbody.appendChild(row);
+      });
+    }
+  </script>
+</body>
+</html>
