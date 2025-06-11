@@ -1,1 +1,92 @@
 
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vote CFSF 2025</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; max-width: 900px; margin: auto; background: #f0f0f0; }
+    h1 { text-align: center; }
+    input, button { width: 100%; padding: 10px; margin: 10px 0; }
+    .candidate { margin: 5px 0; }
+    .candidates { columns: 2; }
+  </style>
+</head>
+<body>
+  <h1>Élections CFSF Auvergne Rhône-Alpes 2025</h1>
+  <form id="voteForm">
+    <input type="text" id="nom" placeholder="Nom" required />
+    <input type="text" id="prenom" placeholder="Prénom" required />
+    <input type="tel" id="telephone" placeholder="Téléphone" required />
+    <div class="candidates" id="candidats">
+      <div class="candidate"><input type="checkbox" name="votes" value="Ibrahim AL GHAZAWI - إبراهيم ذيب الغزاوي" id="cand0" /><label for="cand0">Ibrahim AL GHAZAWI - إبراهيم ذيب الغزاوي</label></div>
+<div class="candidate"><input type="checkbox" name="votes" value="Ahmad amène LA MOHAMMAD - احمد امين سلطان المحمد" id="cand1" /><label for="cand1">Ahmad amène LA MOHAMMAD - احمد امين سلطان المحمد</label></div>
+<div class="candidate"><input type="checkbox" name="votes" value="Ahmad YASOUF - أحمد مصطفى اليسوف" id="cand2" /><label for="cand2">Ahmad YASOUF - أحمد مصطفى اليسوف</label></div>
+<div class="candidate"><input type="checkbox" name="votes" value="Irchid AL NAASAN - ارشيد علي النعسان" id="cand3" /><label for="cand3">Irchid AL NAASAN - ارشيد علي النعسان</label></div>
+<div class="candidate"><input type="checkbox" name="votes" value="Asad SHEHABI  / - أسعد الشهابي" id="cand4" /><label for="cand4">Asad SHEHABI  / - أسعد الشهابي</label></div>
+<div class="candidate"><input type="checkbox" name="votes" value="Amjad KHAROUF  / - أمجد خاروف" id="cand5" /><label for="cand5">Amjad KHAROUF  / - أمجد خاروف</label></div>
+<div class="candidate"><input type="checkbox" name="votes" value="Eyad SHAHED  / - إياد شاهد" id="cand6" /><label for="cand6">Eyad SHAHED  / - إياد شاهد</label></div>
+<div class="candidate"><input type="checkbox" name="votes" value="Ihab NAJI  / - إيهاب ناجي" id="cand7" /><label for="cand7">Ihab NAJI  / - إيهاب ناجي</label></div>
+<div class="candidate"><input type="checkbox" name="votes" value="Basma KHALIL  / - بسمة خليل" id="cand8" /><label for="cand8">Basma KHALIL  / - بسمة خليل</label></div>
+<div class="candidate"><input type="checkbox" name="votes" value="David SOUBY  / - بشير عوض الزعبي" id="cand9" /><label for="cand9">David SOUBY  / - بشير عوض الزعبي</label></div>
+<div class="candidate"><input type="checkbox" name="votes" value="Bilal MOUSTAVA  / - بلال مصطفى" id="cand10" /><label for="cand10">Bilal MOUSTAVA  / - بلال مصطفى</label></div>
+<div class="candidate"><input type="checkbox" name="votes" value="Tammam AL AHMAD  / - تمّام الأحمد" id="cand11" /><label for="cand11">Tammam AL AHMAD  / - تمّام الأحمد</label></div>
+<div class="candidate"><input type="checkbox" name="votes" value="Jamal ALOUKLH  / - جمال موسى العقله" id="cand12" /><label for="cand12">Jamal ALOUKLH  / - جمال موسى العقله</label></div>
+<div class="candidate"><input type="checkbox" name="votes" value="Hussein alhassan ALMUSTAFA - حسين الحسن المصطفى" id="cand13" /><label for="cand13">Hussein alhassan ALMUSTAFA - حسين الحسن المصطفى</label></div>
+<div class="candidate"><input type="checkbox" name="votes" value="Hussein KHODOR  / - حسين خضر" id="cand14" /><label for="cand14">Hussein KHODOR  / - حسين خضر</label></div>
+<div class="candidate"><input type="checkbox" name="votes" value="Hanan QADRAH  / - حنان قدرة" id="cand15" /><label for="cand15">Hanan QADRAH  / - حنان قدرة</label></div>
+<div class="candidate"><input type="checkbox" name="votes" value="Kheder ALKHALEIFA  / - خضر محمود الخليفة" id="cand16" /><label for="cand16">Kheder ALKHALEIFA  / - خضر محمود الخليفة</label></div>
+<div class="candidate"><input type="checkbox" name="votes" value="Mohammad radwan SHAMIAH  / - د.محمد رضوان شاميه" id="cand17" /><label for="cand17">Mohammad radwan SHAMIAH  / - د.محمد رضوان شاميه</label></div>
+<div class="candidate"><input type="checkbox" name="votes" value="Rasha SABAH  / - رشا عبدالله الصباح" id="cand18" /><label for="cand18">Rasha SABAH  / - رشا عبدالله الصباح</label></div>
+<div class="candidate"><input type="checkbox" name="votes" value="Safwan TALEB  / - صفوان طالب" id="cand19" /><label for="cand19">Safwan TALEB  / - صفوان طالب</label></div>
+<div class="candidate"><input type="checkbox" name="votes" value="Abdul Jabar ALNACHIF  / - عبد الجبار الناشف" id="cand20" /><label for="cand20">Abdul Jabar ALNACHIF  / - عبد الجبار الناشف</label></div>
+<div class="candidate"><input type="checkbox" name="votes" value="Abdul hakim KHORSAN  / - عبد الحكيم  خرسان" id="cand21" /><label for="cand21">Abdul hakim KHORSAN  / - عبد الحكيم  خرسان</label></div>
+<div class="candidate"><input type="checkbox" name="votes" value="Abdulkarim SHULLAR  / - عبدالكريم شلار" id="cand22" /><label for="cand22">Abdulkarim SHULLAR  / - عبدالكريم شلار</label></div>
+<div class="candidate"><input type="checkbox" name="votes" value="Abdul Monem AL HASSAN  / - عبدالمنعم الحسن" id="cand23" /><label for="cand23">Abdul Monem AL HASSAN  / - عبدالمنعم الحسن</label></div>
+<div class="candidate"><input type="checkbox" name="votes" value="Adnan SAFAR  / - عدنان سفر" id="cand24" /><label for="cand24">Adnan SAFAR  / - عدنان سفر</label></div>
+<div class="candidate"><input type="checkbox" name="votes" value="Adnan SEDDIK  / - عدنان صديق" id="cand25" /><label for="cand25">Adnan SEDDIK  / - عدنان صديق</label></div>
+<div class="candidate"><input type="checkbox" name="votes" value="Odai AL-HARIRI  / - عدي محمود الحريري" id="cand26" /><label for="cand26">Odai AL-HARIRI  / - عدي محمود الحريري</label></div>
+<div class="candidate"><input type="checkbox" name="votes" value="Alaa AHMED ALASAAD   / - علاء أحمد الأسعد" id="cand27" /><label for="cand27">Alaa AHMED ALASAAD   / - علاء أحمد الأسعد</label></div>
+<div class="candidate"><input type="checkbox" name="votes" value="Alaeldin ABOU SALEH  / - علاء الدين أبوصالح" id="cand28" /><label for="cand28">Alaeldin ABOU SALEH  / - علاء الدين أبوصالح</label></div>
+<div class="candidate"><input type="checkbox" name="votes" value="Ammar SAWWAN  / - عمار صوان" id="cand29" /><label for="cand29">Ammar SAWWAN  / - عمار صوان</label></div>
+<div class="candidate"><input type="checkbox" name="votes" value="Fadi CHAZAL  / - فادي غزال" id="cand30" /><label for="cand30">Fadi CHAZAL  / - فادي غزال</label></div>
+<div class="candidate"><input type="checkbox" name="votes" value="Fayez ADAWI - فايز عدوي" id="cand31" /><label for="cand31">Fayez ADAWI - فايز عدوي</label></div>
+<div class="candidate"><input type="checkbox" name="votes" value="Fahed EL NAYEF  / - فهد النايف" id="cand32" /><label for="cand32">Fahed EL NAYEF  / - فهد النايف</label></div>
+<div class="candidate"><input type="checkbox" name="votes" value="Lana ZABAD  / - لانا زباد" id="cand33" /><label for="cand33">Lana ZABAD  / - لانا زباد</label></div>
+<div class="candidate"><input type="checkbox" name="votes" value="Mohammad SOUD  / - محمد سعود" id="cand34" /><label for="cand34">Mohammad SOUD  / - محمد سعود</label></div>
+<div class="candidate"><input type="checkbox" name="votes" value="Muhamad Aamer MUHANDES  / - محمد عامر مهندس" id="cand35" /><label for="cand35">Muhamad Aamer MUHANDES  / - محمد عامر مهندس</label></div>
+<div class="candidate"><input type="checkbox" name="votes" value="Mostafa ALHAJALI  / - مصطفى عبدالرزاق الحاج علي" id="cand36" /><label for="cand36">Mostafa ALHAJALI  / - مصطفى عبدالرزاق الحاج علي</label></div>
+<div class="candidate"><input type="checkbox" name="votes" value="Mouaz ALFAKEER  / - معاذ خالد الفقير" id="cand37" /><label for="cand37">Mouaz ALFAKEER  / - معاذ خالد الفقير</label></div>
+<div class="candidate"><input type="checkbox" name="votes" value="Nibaal ALMAHMOUD  / - نبال المحمود" id="cand38" /><label for="cand38">Nibaal ALMAHMOUD  / - نبال المحمود</label></div>
+<div class="candidate"><input type="checkbox" name="votes" value="Hanaa MOHAMAD DARWISH  / - هناء محمد دوريش" id="cand39" /><label for="cand39">Hanaa MOHAMAD DARWISH  / - هناء محمد دوريش</label></div>
+<div class="candidate"><input type="checkbox" name="votes" value="Wasem HAJ ABDULLAH  / - وسيم حاج عبد الله" id="cand40" /><label for="cand40">Wasem HAJ ABDULLAH  / - وسيم حاج عبد الله</label></div>
+<div class="candidate"><input type="checkbox" name="votes" value="Waad ALHAJ ALI  / - وعد عبد الرزاق الحاج علي" id="cand41" /><label for="cand41">Waad ALHAJ ALI  / - وعد عبد الرزاق الحاج علي</label></div>
+<div class="candidate"><input type="checkbox" name="votes" value="Yaarob ALABDULLAH  / - يعرب دحام العبدالله" id="cand42" /><label for="cand42">Yaarob ALABDULLAH  / - يعرب دحام العبدالله</label></div>
+    </div>
+    <button type="submit">Valider mon vote</button>
+    <p id="confirmation" style="color: green;"></p>
+  </form>
+  <script>
+    document.getElementById("voteForm").addEventListener("submit", async function(e) {
+      e.preventDefault();
+      const nom = document.getElementById("nom").value.trim();
+      const prenom = document.getElementById("prenom").value.trim();
+      const telephone = document.getElementById("telephone").value.trim();
+      const votes = Array.from(document.querySelectorAll("input[name='votes']:checked")).map(e => e.value);
+      if (!nom || !prenom || !telephone) return alert("Merci de remplir tous les champs.");
+      if (votes.length === 0) return alert("Veuillez sélectionner au moins un candidat.");
+      if (votes.length > 32) return alert("Vous pouvez sélectionner jusqu'à 32 candidats maximum.");
+
+      const data = { nom, prenom, telephone, votes };
+      const res = await fetch("https://script.google.com/macros/s/AKfycbzFpV97dyRhH1ieGFoHoDFbV5-zKWp4LBzpMJhWzkGa0bxJYcT1JbBLCdmMJdOP6Xbu9w/exec", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+      });
+      document.getElementById("confirmation").innerText = "✅ Vote enregistré avec succès !";
+      document.getElementById("voteForm").reset();
+    });
+  </script>
+</body>
+</html>
